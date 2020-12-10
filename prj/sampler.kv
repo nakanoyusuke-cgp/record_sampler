@@ -1,0 +1,34 @@
+<Sampler@BoxLayout>:
+    id:sampler
+    orientation:"horizontal"
+    FilePicker:
+        id:file_picker
+        size_hint_x:0.3
+        size_hint_y:
+
+    BoxLayout:
+        orientation:"vertical"
+        BoxLayout:
+            orientation:"horizontal"
+            id:recorder
+            size_hint_y:0.2
+            TextInput:
+                id:record_file_name
+            Button:
+                size_hint_x:0.3
+                id:recordButton
+                text:"record!"
+                on_press:root.record()
+        GraphView:
+            id:graph_view
+
+        GridLayout:
+            id:pad_grid
+            cols:5
+            rows:2
+
+    Button:
+        size_hint_x:0.1
+        size_hint_y:0.1
+        text:"exit"
+        on_press: root.stop()

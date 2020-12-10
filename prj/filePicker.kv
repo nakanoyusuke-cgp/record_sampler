@@ -1,0 +1,21 @@
+<FilePicker@BoxLayout>
+    id:filePicker
+    orientation:"vertical"
+    BoxLayout:
+        id:controller
+        size_hint_y:0.1
+        TextInput:
+            id:pad_idx
+            size_hint_x:0.7
+            hint_text:"pad index"
+            input_filter:"int"
+            multiline:False
+        Button:
+            id:apply
+            size_hint_x:0.3
+            text:"apply"
+            on_press:root.set_selected_sound()
+    FileChooserListView:
+        id:list_view
+        path:"./"
+        filters:['*.wav']
