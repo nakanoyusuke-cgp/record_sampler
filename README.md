@@ -8,3 +8,8 @@ pip install kivy
 pip install kivy-garden
 garden install matplotlib
 ```
+
+## アプリケーションの起動方法
+```
+python MainApp.py
+```
